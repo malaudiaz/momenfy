@@ -1,6 +1,6 @@
 import { Metadata } from "next";
-import DefaultLayout from "../ui/components/Layouts/DefaultLayout";
-import Recipes from "../ui/components/Recipes";
+import DefaultLayout from "../../ui/components/Layouts/DefaultLayout";
+import Recipes from "../../ui/components/Recipes";
 
 export const metadata: Metadata = {
   title: "Momenfy | Recetas",

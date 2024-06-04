@@ -1,6 +1,6 @@
 import { Metadata } from "next";
-import DefaultLayout from "../ui/components/Layouts/DefaultLayout";
-import Messages from "../ui/components/Messages";
+import DefaultLayout from "../../ui/components/Layouts/DefaultLayout";
+import Messages from "../../ui/components/Messages";
 
 export const metadata: Metadata = {
   title: "Momenfy | Mensajes Personales",

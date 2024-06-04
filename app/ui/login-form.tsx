@@ -13,16 +13,15 @@ import { ArrowRightIcon } from '@heroicons/react/20/solid';
 
 import { Button } from "./components/button";
 import { useFormState, useFormStatus } from 'react-dom';
+import { authenticate } from '../lib/actions';
 
 export default function LoginForm() {
-//   const [errorMessage, dispatch] = useFormState(authenticate, undefined);
+  const [errorMessage, dispatch] = useFormState(authenticate, undefined);
+
 
   return (
-    <form  className="space-y-3">
-      <div className="flex-1 rounded-lg bg-gray-50 px-6 pb-4 pt-8">
-        <h1 className={`${lusitana.className} mb-3 text-2xl`}>
-          Aquí empieza tú legado
-        </h1>
+    <form action={dispatch} className="space-y-3">
+      <div className="flex-1 rounded-lg bg-gray-50 px-6 pb-4">
         <div className="w-full">
           <div>
             <label
@@ -54,7 +53,7 @@ export default function LoginForm() {
               <input
                 className="peer block w-full rounded-md border border-gray-200 py-[9px] pl-10 text-sm outline-2 placeholder:text-gray-500"
                 id="password"
-                type="password"
+                // type="password"
                 name="password"
                 placeholder="Entre su contraseña"
                 required
@@ -70,12 +69,12 @@ export default function LoginForm() {
           aria-live="polite"
           aria-atomic="true"
         >
-          {/* {errorMessage && (
+          {errorMessage && (
             <>
               <ExclamationCircleIcon className="h-5 w-5 text-red-500" />
               <p className="text-sm text-red-500">{errorMessage}</p>
             </>
-          )} */}
+          )}
         </div>
       </div>
     </form>
